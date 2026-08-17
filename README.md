@@ -1,12 +1,12 @@
 # Dynamic Resistance Spacetime (DRS)
 
-### A Covariant Viscoelastic-Response Hypothesis for Extreme Gravitational Compression
+### A Covariant Viscoelastic-Response Hypothesis for Extreme Gravitational Collapse
 
 **Author:** Oğuzhan Çavdar  
 **Status:** Theoretical Hypothesis / Phenomenological Model  
 **Field:** General Relativity, Relativistic Hydrodynamics, Compact Objects  
 **Model:** Dynamic Resistance Spacetime (DRS)  
-**Secondary model:** Viscoelastic Adaptation Model (VAM)
+**Secondary Model:** Viscoelastic Adaptation Model (VAM)
 
 ---
 
@@ -45,12 +45,19 @@ $$
 where
 
 $$
+\boxed{
 \Theta = \nabla_\mu u^\mu
+}
 $$
 
-is the relativistic expansion scalar,
+is the relativistic expansion scalar.
 
-$\tau>0$ is the relaxation timescale, and $\zeta\geq0$ is an effective resistance coefficient.
+Here:
+
+- $\tau>0$ is the relaxation timescale.
+- $\zeta\geq0$ is an effective resistance coefficient.
+- $u^\mu$ is the fluid four-velocity.
+- $\Pi$ is the dynamical resistance pressure.
 
 During compression,
 
@@ -91,7 +98,7 @@ where $G_{\mu\nu}$ is the Einstein tensor and $T_{\mu\nu}$ is the stress-energy 
 
 Classical GR admits solutions in which curvature invariants may become arbitrarily large.
 
-The DRS hypothesis does not attempt to replace the Einstein field equations arbitrarily.
+The DRS hypothesis does not attempt to arbitrarily replace the Einstein field equations.
 
 Instead, it investigates whether the stress-energy response of rapidly compressed matter may contain an additional dynamical component.
 
@@ -125,25 +132,19 @@ The effective pressure is defined as
 
 $$
 \boxed{
-p_{\mathrm{eff}}=p+\Pi.
+p_{\mathrm{eff}}=p+\Pi
 }
 $$
 
-Here:
+where:
 
 - $p$ is the ordinary matter pressure.
 - $\Pi$ is the DRS dynamical resistance pressure.
 - $p_{\mathrm{eff}}$ is the total effective isotropic pressure.
 
-The DRS variable $\Pi$ is not prescribed algebraically by $\dot{\rho}$ in the baseline model.
+The DRS variable $\Pi$ is not prescribed algebraically by $d\rho/dt$ in the baseline model.
 
-Instead, it evolves dynamically according to a relaxation equation.
-
----
-
-# 3. Closed Baseline DRS Constitutive Model
-
-The baseline DRS constitutive equation is
+Instead, it evolves dynamically according to the relaxation equation
 
 $$
 \boxed{
@@ -159,6 +160,32 @@ $$
 }
 $$
 
+This replaces the previous phenomenological expression
+
+$$
+\Pi\propto\eta\frac{d\rho}{dt}
+$$
+
+with a covariant relaxation model.
+
+---
+
+# 3. Closed Baseline DRS Constitutive Model
+
+The baseline DRS constitutive equation is
+
+$$
+\boxed{
+\tau u^\mu\nabla_\mu\Pi+\Pi=-\zeta\Theta
+}
+$$
+
+where
+
+$$
+\Theta=\nabla_\mu u^\mu.
+$$
+
 The derivative
 
 $$
@@ -167,9 +194,7 @@ $$
 
 is the derivative along the fluid four-velocity.
 
-Therefore the model uses the proper-time evolution of the DRS pressure.
-
-The corresponding source term is
+The compression source is therefore
 
 $$
 \boxed{
@@ -177,17 +202,17 @@ F=-\zeta\Theta.
 }
 $$
 
-This replaces the previously undefined function
+This removes the previously undefined function
 
 $$
 F(\rho,\dot{\rho},v,\partial_rv,\ldots).
 $$
 
-The baseline model is therefore phenomenologically closed with respect to the DRS stress variable $\Pi$.
+The baseline model is phenomenologically closed with respect to the DRS stress variable $\Pi$.
 
-This does not mean that the equation has been derived uniquely from a fundamental microscopic theory.
+This does not mean that the equation has been uniquely derived from a fundamental microscopic theory.
 
-It is a proposed constitutive law that must be tested.
+It is a proposed constitutive law that must be tested against relativistic consistency, stability, causality, numerical behavior, and observations.
 
 ---
 
@@ -199,25 +224,31 @@ $$
 \tau u^\mu\nabla_\mu\Pi+\Pi=-\zeta\Theta
 $$
 
-contains two characteristic terms.
+contains three important components.
 
-The relaxation term is
-
-$$
-\tau u^\mu\nabla_\mu\Pi.
-$$
-
-The instantaneous-response term is
+### Relaxation term
 
 $$
-\Pi.
+\tau u^\mu\nabla_\mu\Pi
 $$
 
-The compression source is
+describes the finite response time of the DRS sector.
+
+### Resistance term
 
 $$
--\zeta\Theta.
+\Pi
 $$
+
+represents the current dynamical resistance pressure.
+
+### Compression source
+
+$$
+-\zeta\Theta
+$$
+
+generates resistance during compression.
 
 For compression,
 
@@ -233,7 +264,7 @@ $$
 
 Thus the model generates positive resistance pressure during compression.
 
-For a slowly varying system,
+For slowly varying systems,
 
 $$
 u^\mu\nabla_\mu\Pi\approx0,
@@ -245,7 +276,7 @@ $$
 \Pi\approx-\zeta\Theta.
 $$
 
-For very rapid changes, the finite relaxation time $\tau$ prevents $\Pi$ from responding instantaneously.
+For rapidly changing systems, the finite relaxation time $\tau$ prevents $\Pi$ from responding instantaneously.
 
 ---
 
@@ -325,7 +356,7 @@ $$
 
 This is the baseline isotropic DRS model.
 
-More general anisotropic or dissipative extensions are left for future research.
+More general anisotropic or dissipative extensions are left for future investigation.
 
 ---
 
@@ -488,7 +519,7 @@ A DRS result that only works for one arbitrary equation of state would not by it
 
 # 10. Relation to the TOV Equation
 
-For a static, spherically symmetric perfect fluid, the standard TOV equations are
+For a static, spherically symmetric perfect fluid, the standard TOV equations can be written in geometrized units $G=c=1$ as
 
 $$
 \boxed{
@@ -498,7 +529,7 @@ $$
 }
 $$
 
-and, in geometrized units $G=c=1$,
+and
 
 $$
 \boxed{
@@ -571,7 +602,9 @@ $$
 
 $$
 \boxed{
-\tau u^\mu\nabla_\mu\Pi+\Pi
+\tau u^\mu\nabla_\mu\Pi
++
+\Pi
 =
 -\zeta\nabla_\mu u^\mu
 }
@@ -717,7 +750,7 @@ $$
 
 # 16. Simplified One-Zone Numerical Model
 
-The current preliminary Python simulation uses a simplified one-zone compression model.
+The preliminary Python simulation uses a simplified one-zone compression model.
 
 The density evolution is prescribed as
 
@@ -820,9 +853,9 @@ $$
 }
 $$
 
-The numerical Python implementation compares its numerical solution against this analytical solution.
+The numerical Python implementation should compare its numerical solution against this analytical solution.
 
-The maximum numerical error should decrease as numerical resolution and solver tolerances are improved.
+The numerical error should decrease as numerical resolution and solver tolerances are improved.
 
 ---
 
@@ -982,8 +1015,8 @@ It would be weakened or rejected if:
 1. The effective stress-energy tensor violates required conservation laws.
 2. The complete equations permit acausal propagation.
 3. The solutions are dynamically unstable in the relevant physical regime.
-4. The GR limit cannot be recovered.
-5. Numerical results fail to converge.
+4. Numerical results fail to converge.
+5. The GR limit cannot be recovered.
 6. The proposed finite-density behavior requires an artificial density ceiling.
 7. The exact curvature invariants still diverge in the proposed regularization regime.
 8. Observations exclude the allowed DRS parameter region.
@@ -1061,7 +1094,7 @@ Implement a fully time-dependent relativistic collapse calculation.
 
 ## Stage 5
 
-Calculate the spacetime metric produced by the coupled DRS system.
+Implement the spacetime metric and solve the coupled DRS-Einstein system.
 
 ## Stage 6
 
@@ -1164,12 +1197,6 @@ Therefore, DRS is presented as a theoretical hypothesis and phenomenological fra
 Independent Student Researcher
 
 Türkiye
-
----
-
-# Repository
-
-Dynamic Resistance Spacetime (DRS)
 
 ---
 
